@@ -1,0 +1,132 @@
+.about {
+  &__item {
+    &::before {
+      display: block;
+      content: "";
+      width: 55px;
+      height: 38px;
+      margin: 0 0 20px 0;
+    }
+
+    &--clear {
+      background: url("../img/icon-feature-flower.svg") no-repeat;
+    }
+
+    &--style {
+      background: url("../img/icon-feature-money.svg") no-repeat;
+    }
+
+    &--like {
+      background: url("../img/icon-feature-heart.svg") no-repeat;
+    }
+
+    &--handmade {
+      background: url("../img/icon-feature-ball.svg") no-repeat;
+    }
+
+    &--domestic {
+      background: url("../img/icon-feature-rocket.svg") no-repeat;
+    }
+
+    &--gift {
+      background: url("../img/icon-feature-gift.svg") no-repeat;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .about {
+    display: grid;
+    padding: 0 30px 22px 30px;
+
+    &__title {
+      margin: 24px 0 21px;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    &__list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    &__item {
+      font-size: 17px;
+      font-weight: bold;
+      margin: 0 0 30px 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    display: grid;
+    margin: 47px 52px 0 48px;
+    grid-row-gap: 47px;
+
+
+    &__title {
+      margin: 0;
+      font-size: 43px;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 57px 20px;
+      grid-template-areas: "clear handmade" "style domestic" "like gift";
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 20px;
+      font-weight: bold;
+      color: #000000;
+      line-height: 1.1;
+    }
+
+    &__item {
+      &--clear {
+        grid-area: clear;
+      }
+
+      &--handmade {
+        grid-area: handmade;
+      }
+
+      &--style {
+        grid-area: style;
+      }
+
+      &--domestic {
+        grid-area: domestic;
+      }
+
+      &--like {
+        grid-area: like;
+      }
+
+      &--gift {
+        grid-area: gift;
+      }
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .about {
+    max-width: 1150px;
+    margin: 60px auto 0 auto;
+
+    &__title {
+      font-size: 53px;
+      font-weight: bold;
+      margin: 0 220px 0 220px;
+    }
+
+    &__list {
+      margin: 0 220px 0 220px;
+    }
+  }
+}

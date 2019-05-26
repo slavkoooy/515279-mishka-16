@@ -1,0 +1,288 @@
+@media (max-width: 767px) {
+  .reviews {
+    display: grid;
+    padding: 0 35px 0 30px;
+
+    &__title {
+      padding: 0;
+      margin: 0;
+    }
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 15px;
+      line-height: 2;
+      color: $grey;
+    }
+
+    &__body {
+      padding: 10px 0 0 0;
+    }
+
+    &__author {
+      padding: 0;
+      margin: 0;
+      font-size: 17px;
+      font-weight: bold;
+      color: #000000;
+    }
+
+    &__nickname {
+      padding: 0;
+      margin: 0 0 30px 0;
+    }
+
+    &__controls {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 0 38px 0;
+    }
+
+    &__control {
+      padding: 25px 0 25px;
+      cursor: pointer;
+
+      &--prev {
+        background: url("../img/icon-left-arrow.svg") no-repeat 50%;
+      }
+
+      &--next {
+        background: url("../img/icon-right-arrow.svg") no-repeat 50%;
+      }
+    }
+
+
+    &__write {
+      padding: 14px 0 14px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: $grey;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 2px solid $grey;
+
+      &:hover {
+        color: #ffffff;
+        background-color: $grey;
+      }
+
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1149px) {
+  .reviews {
+    position: relative;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: "title write" "list ." ". controls";
+    margin: 82px 52px 0 0;
+    padding: 0 0 69px 0;
+    background: url("../img/review@1x.jpg") no-repeat;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      width: 100%;
+      height: 15px;
+      background: url("../img/bg-zigzag-line.svg") repeat-x;
+      background-size: auto 15px;
+    }
+
+    &__title {
+      grid-area: title;
+      grid-column: 1/2;
+      margin: 86px 0 0 48px;
+      font-size: 43px;
+      font-weight: bold;
+      line-height: 1.16;
+    }
+
+    &__list {
+      grid-area: list;
+      margin: 43px 25px 0 48px;
+      padding: 0;
+      list-style: none;
+      grid-column: 1/3;
+    }
+
+    &__item {
+      color: $grey;
+      font-size: 17px;
+    }
+
+    &__body {
+      margin: 0;
+      line-height: 1.76;
+    }
+
+    &__author {
+      margin: 58px 0 0 0;
+      color: #000000;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    &__nickname {
+      margin: 10px 0 0 0;
+      font-size: 17px;
+      color: $grey;
+    }
+
+    &__write {
+      grid-area: write;
+      grid-column: 2/3;
+      margin: 94px 0 8px 0;
+      padding: 12px 41px;
+      font-size: 17px;
+      font-weight: bold;
+      color: $grey;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 2px solid $grey;
+
+      &:hover {
+        color: #ffffff;
+        background-color: $grey;
+      }
+
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    &__controls {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-area: controls;
+    }
+
+    &__control {
+      padding: 25px 0 25px;
+      cursor: pointer;
+      border: none;
+
+      &--prev {
+        background: url("../img/icon-left-arrow.svg") no-repeat 50%;
+      }
+
+      &--next {
+        background: url("../img/icon-right-arrow.svg") no-repeat 50%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .reviews {
+    position: relative;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    max-width: 1050px;
+    margin: 75px auto 0 auto;
+    padding: 0 0 75px 0;
+    background: url("../img/review@1x.jpg") no-repeat;
+
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      width: 100%;
+      height: 23px;
+      background: url("../img/bg-zigzag-line.svg") repeat-x;
+      background-size: auto 23px;
+    }
+
+    &__title {
+      margin: 59px 0 45px 170px;
+      font-size: 53px;
+      font-weight: bold;
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+
+    &__body {
+      margin: 0;
+      line-height: 1.74;
+      color: $grey;
+    }
+
+    &__list {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      padding: 0;
+      margin: 0 130px 100px 170px;
+      list-style: none;
+    }
+
+    &__author {
+      margin: 45px 0 6px 0;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    &__nickname {
+      margin: 0;
+      color: $grey;
+      font-size: 17px;
+    }
+
+    &__write {
+      padding: 12px 40px;
+      margin: auto 0;
+      font-size: 17px;
+      font-weight: bold;
+      color: $grey;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 2px solid $grey;
+
+      &:hover {
+        color: #ffffff;
+        background-color: $grey;
+      }
+
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    &__controls {
+      grid-row: 2/3;
+      grid-column: 2/3;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: auto 0 0 0;
+    }
+
+    &__control {
+      padding: 25px 0 25px;
+      cursor: pointer;
+      border: none;
+
+      &--prev {
+        background: url("../img/icon-left-arrow.svg") no-repeat 50%;
+      }
+
+      &--next {
+        background: url("../img/icon-right-arrow.svg") no-repeat 50%;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+}

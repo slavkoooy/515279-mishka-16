@@ -2,45 +2,49 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style.css" rel="stylesheet">
   <title>Mishka</title>
 </head>
 <body>
 <header class="page-header">
   <a class="page-header__logo" href="#">
-    <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="Логотип">
+    <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Mishka">
   </a>
   <nav class="main-nav">
-    <button class="main-nav__menu" type="button">Открыть меню</button>
     <ul class="main-nav__list site-list">
-      <li class="site-list__item">
-        <a href="#">Каталог товаров</a>
+      <li class="site-list__item site-list__item--catalog">
+        <a class="site-list__link" href="catalog.html">Каталог товаров</a>
       </li>
-      <li class="site-list__item">
-        <a href="#">Вязание на заказ</a>
+      <li class="site-list__item site-list__item--order">
+        <a class="site-list__link" href="#">Вязание на заказ</a>
       </li>
-      <li class="site-list__item">
-        <a href="#">Поиск</a>
+      <li class="site-list__item site-list__item--search">
+        <a class="site-list__link" href="#">Поиск по сайту</a>
       </li>
-      <li class="site-list__item">
-        <a href="#">Корзина</a>
+      <li class="site-list__item site-list__item--basket">
+        <a class="site-list__link" href="#">Корзина: пока пуста</a>
       </li>
     </ul>
   </nav>
 </header>
 <main class="page-main">
-  <section class="main-screen">
-    <h1 class="main-screen__title">Милые штуки ручной работы для дома</h1>
-    <a href="#" class="main-screen__item">Предметы интерьера</a>
-    <a href="#" class="main-screen__item">Детские игрушки</a>
-  </section>
+  <div class="main-screen-wrapper">
+    <section class="main-screen">
+      <h1 class="main-screen__title">Милые штуки ручной<br> работы для дома</h1>
+      <a href="#" class="main-screen__item main-screen__item--interior">Предметы<br>интерьера</a>
+      <a href="#" class="main-screen__item main-screen__item--toys">Детские<br>игрушки</a>
+    </section>
+  </div>
   <section class="baskets">
     <h2 class="baskets__title">Вязаные корзинки</h2>
+    <span class="baskets__state">Товар недели</span>
     <p class="baskets__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
       размерах.</p>
     <table class="baskets__list">
       <tr>
         <td class="baskets__parameter">Цвет:</td>
-        <td class="baskets__value">"Тиффани/серый</td>
+        <td class="baskets__value">«Тиффани»/серый</td>
       </tr>
       <tr>
         <td class="baskets__parameter">Диаметр:</td>
@@ -51,41 +55,83 @@
         <td class="baskets__value">15 см</td>
       </tr>
     </table>
-    <img class="baskets__image" src="http://placehold.it/260x315" alt="Изображение товара">
+    <img class="baskets__image" src="img/triple-set-mobile.jpg" alt="Изображение товара">
     <p class="baskets__price">Цена: 990 руб.</p>
-    <a class="baskets__buy button" href="#">Заказать</a>
+    <a class="baskets__buy" href="#">Заказать</a>
   </section>
   <section class="about">
-    <h2 class="about__title">Коротко о нас</h2>
+    <h2 class="about__title">Коротко о нас:</h2>
     <ul class="about__list">
-      <li class="about__item">Экологически чистые материалы</li>
-      <li class="about__item">Скандинавский стиль по российской цене</li>
-      <li class="about__item">Увеличивает лайки на фотографиях</li>
-      <li class="about__item">Связано вручную с любовью и умилением</li>
-      <li class="about__item">Поддержка отечественного производителя</li>
-      <li class="about__item">Поставляется в подарочной упаковке</li>
+      <li class="about__item about__item--clear">Экологически чистые материалы</li>
+      <li class="about__item about__item--style">Скандинавский стиль по российской цене</li>
+      <li class="about__item about__item--like">Увеличивает лайки на фотографиях</li>
+      <li class="about__item about__item--handmade">Связано вручную с любовью и умилением</li>
+      <li class="about__item about__item--domestic">Поддержка отечественного производителя</li>
+      <li class="about__item about__item--gift">Поставляется в подарочной упаковке</li>
     </ul>
   </section>
-  <footer class="page-footer">
-    <ul class="page-footer__social social">
-      <li class="social__item">
-        <a class="social__link social__link--instagram" href="#">
-          Mishka в Инстаграм
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href="#">
-          Mishka на Фейсбук
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--twitter" href="#">
-          Mishka в Твиттере
-        </a>
+  <section class="reviews">
+    <h2 class="reviews__title">Отзывы</h2>
+    <ul class="reviews__list">
+      <li class="reviews__item">
+        <p class="reviews__body"> Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
+          как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу
+          стали более стильными, а также набирают больше лайков!</p>
+        <p class="reviews__author">Анастасия Красильникова</p>
+        <p class="reviews__nickname">@misssssiskras</p>
       </li>
     </ul>
-    <a class="page-footer__copyright" href="#">Разработано HTML Academy</a>
-  </footer>
+    <div class="reviews__controls">
+      <button class="reviews__control reviews__control--prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span>
+      </button>
+      <button class="reviews__control reviews__control--next" type="button"><span class="visually-hidden">Следующий отзыв</span>
+      </button>
+    </div>
+    <a class="reviews__write" href="#">Написать</a>
+  </section>
+  <section class="contacts">
+    <h2 class="contacts__title">Контакты</h2>
+    <dl class="contacts__list">
+      <dt class="contacts__item">e-mail:</dt>
+      <dd class="contacts__value contacts__value--mail"><a href="mailto: info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
+      <dt class="contacts__item">адрес:</dt>
+      <dd class="contacts__value contacts__value--address">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис
+        101
+      </dd>
+    </dl>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018932177199!2d30.321950376208093!3d59.938716495446805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1558435416761!5m2!1sru!2sru"
+      width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <a class="contacts__button" href="#">Напишите нам</a>
+  </section>
 </main>
+<footer class="page-footer">
+  <img class="page-footer__logo" src="img/logo-footer.svg" alt="Логотип Mishka">
+  <ul class="page-footer__social social">
+    <li class="social__item">
+      <a class="social__link social__link--instagram" href="#">
+        <span class="visually-hidden">Mishka в Инстаграм</span>
+      </a>
+    </li>
+    <li class="social__item">
+      <a class="social__link social__link--facebook" href="#">
+        <span class="visually-hidden">Mishka на Фейсбук</span>
+      </a>
+    </li>
+    <li class="social__item">
+      <a class="social__link social__link--twitter" href="#">
+        <span class="visually-hidden">Mishka в Твиттере</span>
+      </a>
+    </li>
+  </ul>
+  <a class="page-footer__copyright" href="#">Разработано <span class="visually-hidden">HTML Academy</span>
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09"
+         enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+  <path
+    d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+</svg>
+  </a>
+</footer>
 </body>
 </html>
