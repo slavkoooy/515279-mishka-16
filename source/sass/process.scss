@@ -1,0 +1,100 @@
+@media (min-width: 320px) {
+  .process {
+    margin: 30px 0 0 0;
+
+    &__list {
+      padding: 0;
+      margin: 0 30px 0 30px;
+      list-style: none;
+    }
+  }
+
+  .item-video {
+    display: grid;
+    margin: 0 0 58px 0;
+    border: 1px solid $light-grey;
+
+    &__title {
+      position: relative;
+      margin: 29px 0 26px 0;
+      padding: 0 0 0 28.44vw;
+      font-weight: bold;
+      font-size: 5.32vw;
+      line-height: 1.41;
+
+      &::after {
+        position: absolute;
+        left: 10.63vw;
+        top: 10px;
+        content: "";
+        width: 10vw;
+        height: 6.88vw;
+        background: url("../img/icon-video.svg") 0 no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &__picture {
+      width: 100%;
+    }
+
+    & picture {
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
+
+    &__play {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      justify-self: center;
+      align-self: center;
+      width: 101px;
+      height: 77px;
+      padding: 0;
+      background: url("../img/icon-play.svg") no-repeat;
+      border: none;
+      cursor: pointer;
+      z-index: 1;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      &:active {
+        transform: scale(0.8);
+        opacity: 0.3;
+      }
+    }
+
+    &__description {
+      margin: 34px 40px 29px 34px;
+      font-size: 4.07vw;
+      line-height: 1.85;
+    }
+
+    &__button {
+      margin: 0 34px 33px 34px;
+      padding: 12px 0 12px 0;
+      color: $grey;
+      font-size: 5.32vw;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      border: 2px solid $grey;
+
+      &:hover {
+        color: #ffffff;
+        background-color: $grey;
+      }
+
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  
+}
