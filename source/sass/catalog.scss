@@ -1,4 +1,4 @@
-@media (min-width: 320px) {
+@media (min-width: $mobile-width) {
   .catalog {
     display: grid;
     margin: 0;
@@ -94,7 +94,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .catalog {
     display: grid;
 
@@ -161,7 +161,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: $desktop-width) {
   .catalog {
     display: grid;
     max-width: 1050px;
@@ -192,6 +192,7 @@
       &__properties {
         grid-column: 1/2;
         font-size: 15px;
+        padding: 0 0 19px 0;
       }
 
       &__description {

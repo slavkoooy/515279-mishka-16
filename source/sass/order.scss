@@ -1,0 +1,457 @@
+.container {
+  grid-column: 1/2;
+}
+
+@media (min-width: $mobile-width) {
+  .order {
+    display: grid;
+
+    &__title {
+      margin: 0;
+      padding: 60px 0 72px 0;
+      font-size: 27px;
+      text-align: center;
+      background-color: $grey-back;
+    }
+
+    &__description {
+      margin: 25px 48px 30px 30px;
+      font-size: 13px;
+      line-height: 1.85;
+      color: $grey;
+    }
+
+    &__form {
+      margin: 0 30px;
+    }
+
+    &__fieldset {
+      position: relative;
+      padding: 23px 0 23px 0;
+      border: none;
+      border-top: 1px solid $seafoam-blue;
+
+      & input[type="text"], input[type="tel"], input[type="email"] {
+        width: 100%;
+        padding: 16px 0;
+        font-size: 17px;
+        border: none;
+        border-bottom: 2px solid #000000;
+        border-radius: 0;
+      }
+
+      & legend {
+        position: absolute;
+        top: -12px;
+        left: 0;
+        padding: 0 27px 0 0;
+        color: $seafoam-blue;
+        text-align: left;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #ffffff;
+      }
+
+      &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        & li {
+          padding: 15px 0 15px 60px;
+          font-size: 17px;
+          font-weight: bold;
+          line-height: 1.06;
+        }
+      }
+    }
+
+    &__required {
+      margin: 0 0 30px 0;
+      font-size: 14px;
+      color: $grey;
+    }
+
+    &__button {
+      width: 100%;
+      padding: 14px 0 14px 0;
+      margin: 0 0 55px 0;
+      color: $grey;
+      font-size: 17px;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      border: 2px solid $grey;
+      cursor: pointer;
+    }
+  }
+
+  .order__fieldset--type {
+    padding: 23px 0 32px 0;
+
+    .order__fieldset__list {
+
+      & input:checked + label::after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: -48px;
+        width: 16px;
+        height: 16px;
+        background-color: $seafoam-blue;
+        border-radius: 50%;
+      }
+
+      & label {
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -5px;
+          left: -60px;
+          width: 35px;
+          height: 35px;
+          background-color: #ffffff;
+          border: 2px solid $grey;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .order__fieldset--color {
+    padding: 23px 0 18px 0;
+
+    .order__fieldset__list {
+
+      li {
+        padding: 20px 0 25px 60px;
+      }
+
+      & input:checked + label::after {
+        content: url("../img/icon-tick.svg");
+        position: absolute;
+        top: 0;
+        left: -59px;
+        width: 20px;
+        height: 16px;
+      }
+
+      & label {
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -8px;
+          left: -62px;
+          width: 35px;
+          height: 35px;
+          border: 2px solid $grey;
+        }
+      }
+    }
+  }
+
+  .order__fieldset--name {
+    padding: 35px 0 20px 0;
+
+    .order__fieldset__list {
+      li {
+        padding: 0;
+        margin: 0 0 19px 0;
+      }
+    }
+  }
+
+  .order__fieldset--tel {
+    padding: 12px 0 40px 0;
+  }
+
+  .order__fieldset--email {
+    padding: 12px 0 40px 0;
+  }
+
+  .order__fieldset--add {
+    padding: 33px 0 10px 0;
+
+    textarea {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 11px 13px;
+      height: 140px;
+      font-size: 17px;
+      border: 2px solid #000000;
+      border-radius: 0;
+      resize: none;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    grid-column: 1/3;
+  }
+
+  .order {
+
+    &__title {
+      font-size: 43px;
+    }
+
+    &__description {
+      margin: 76px 105px 61px 51px;
+      font-size: 17px;
+    }
+
+    &__fieldset {
+      border: none;
+      padding: 0 0 0 217px;
+      margin: 0 0 50px 0;
+
+      & legend {
+        top: 10px;
+        left: 51px;
+        background-color: transparent;
+      }
+    }
+
+    &__form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0;
+    }
+  }
+
+  .order__fieldset--type {
+    grid-column: 1/3;
+    margin-bottom: 22px;
+
+    .order__fieldset__list {
+
+      li {
+        padding: 10px 0 45px 80px;
+      }
+
+      & input:checked + label::after {
+        left: -65px;
+        width: 22px;
+        height: 22px;
+      }
+
+      label {
+        font-size: 19px;
+
+        &::before {
+          top: -10px;
+          left: -80px;
+          height: 48px;
+          width: 48px;
+        }
+      }
+    }
+  }
+
+  .order__fieldset--color {
+    grid-column: 1/3;
+    background-color: $grey-back;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+
+    legend {
+      top: 65px;
+    }
+
+    .order__fieldset__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      & input:checked + label::after {
+        top: 4px;
+        left: -70px;
+      }
+
+      li {
+        padding: 8px 0 48px 80px;
+      }
+
+      & label {
+        font-size: 19px;
+
+        &::before {
+          top: -11px;
+          left: -80px;
+          width: 49px;
+          height: 49px;
+        }
+      }
+    }
+  }
+
+  .order__fieldset--name {
+    grid-column: 1/3;
+    padding: 0;
+    margin: 0;
+
+    legend {
+      top: 60px;
+    }
+
+    .order__fieldset__list {
+      padding: 45px 50px 30px 219px;
+
+      li {
+        display: grid;
+        grid-template-columns: 1fr 3.75fr;
+        grid-column-gap: 26px;
+        margin: 0 0 19px 0;
+        font-size: 19px;
+      }
+
+      input[type="text"] {
+        padding: 17px 0 16px 0;
+        font-size: 19px;
+      }
+
+      label {
+        align-self: center;
+      }
+    }
+  }
+
+  .order__fieldset--tel {
+    grid-column: 1/3;
+    padding: 48px 50px 0 217px;
+    margin: 0;
+    background-color: $grey-back;
+
+    input {
+      background-color: $grey-back;
+    }
+
+    legend {
+      top: 60px;
+    }
+  }
+
+  .order__fieldset--email {
+    grid-column: 1/3;
+    padding: 18px 50px 50px 217px;
+    margin: 0;
+    background-color: $grey-back;
+
+    input {
+      background-color: $grey-back;
+    }
+
+    legend {
+      top: 35px;
+    }
+  }
+
+  .order__fieldset--add {
+    grid-column: 1/3;
+    margin: 50px 50px 0 0;
+  }
+
+  .order__required {
+    grid-column: 2/3;
+    grid-row: 7/8;
+    align-self: center;
+    margin: 0 50px 0 auto;
+    font-size: 17px;
+  }
+
+  .order__button {
+    grid-column: 1/2;
+    grid-row: 7/8;
+    margin: 53px auto 50px 50px;
+    width: 230px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: $desktop-width) {
+
+  .container {
+    grid-column: 1/3;
+    background-color: $grey-back;
+  }
+
+  .order {
+    
+
+    &__title {
+      padding: 28px 0 111px 0;
+      font-size: 53px;
+    }
+
+    &__description {
+      width: 672px;
+      margin: 105px auto 61px auto;
+    }
+  }
+
+  .order__fieldset {
+    padding-left: 225px;
+
+    legend {
+      left: 115px;
+    }
+  }
+
+  .order__fieldset--type {
+    width: $desktop-width;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+
+  .order__fieldset--color {
+    width: $desktop-width;
+    box-sizing: border-box;
+    padding: 50px 130px 20px 225px;
+    margin: 0 auto;
+
+    .order__fieldset__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .order__fieldset--name {
+    width: $desktop-width;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    .order__fieldset__list {
+      padding: 50px 225px 40px 0;
+    }
+  }
+
+  .order__fieldset--tel {
+    width: $desktop-width;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 40px 225px 0 225px;
+  }
+
+  .order__fieldset--email {
+    width: $desktop-width;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px 225px 50px 225px;
+  }
+
+  .order__fieldset--add {
+    width: $desktop-width;
+    box-sizing: border-box;
+    margin: 50px auto;
+    padding: 0 225px;
+  }
+}
+

@@ -34,8 +34,7 @@
   }
 }
 
-
-@media (max-width: 767px) {
+@media (max-width: $tablet-width - 1px) {
   .about {
     display: grid;
     padding: 0 30px 22px 30px;
@@ -60,7 +59,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .about {
     display: grid;
     margin: 47px 52px 0 48px;
@@ -114,7 +113,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: $desktop-width) {
   .about {
     max-width: 1150px;
     margin: 60px auto 0 auto;

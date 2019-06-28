@@ -1,30 +1,3 @@
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/opensans.woff2") format("woff2"),
-  url("../fonts/opensans.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/opensansbold.woff2") format("woff2"),
-  url("../fonts/opensansbold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-
-$seafoam-blue: #63d1bb;
-$seafoam-blue-two: #59d5bc;
-$very-dark-brown: #010000;
-$aqua-marine: #56c3b2;
-$aqua-marine-two: #46c1ae;
-$grey: #444444;
-$light-grey: #ececec;
-$grey-back: #f1f1f1;
-$grey-back-2: #f9f9f9;
-
-
 body {
   font-family: OpenSans, Arial, Helvetica;
   background-color: #ffffff;
@@ -44,6 +17,8 @@ body {
   overflow: hidden;
 }
 
+@import "fonts";
+@import "variables";
 @import "page-header";
 @import "main-screen";
 @import "baskets";
@@ -53,3 +28,4 @@ body {
 @import "contacts";
 @import "catalog";
 @import "process";
+@import "order";

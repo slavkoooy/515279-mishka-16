@@ -19,7 +19,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $tablet-width - 1px) {
   .social {
     display: flex;
     justify-content: space-between;
@@ -64,7 +64,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .page-footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
