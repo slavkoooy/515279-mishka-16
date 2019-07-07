@@ -52,6 +52,7 @@
 
       &__buy {
         position: relative;
+        cursor: pointer;
 
         & svg {
           position: absolute;
@@ -164,11 +165,10 @@
 @media (min-width: $desktop-width) {
   .catalog {
     display: grid;
-    max-width: 1050px;
-    margin: 0 auto 0 auto;
 
     &__list {
-      margin: 111px 0 0 0;
+      max-width: 1050px;
+      margin: 111px auto 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 316px);
       grid-column-gap: 52px;

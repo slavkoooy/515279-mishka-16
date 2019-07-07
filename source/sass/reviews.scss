@@ -86,6 +86,7 @@
     padding: 0 0 69px 0;
     background: url("../img/review@1x.jpg") no-repeat;
 
+
     &::after {
       position: absolute;
       content: "";
@@ -189,6 +190,11 @@
     margin: 75px auto 0 auto;
     padding: 0 0 75px 0;
     background: url("../img/review@1x.jpg") no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/review@2x.jpg") no-repeat;
+      background-size: auto 458px;
+    }
 
 
     &::after {

@@ -7,7 +7,7 @@
   <title>Каталог товаров</title>
 </head>
 <body>
-<header class="page-header page-header--index">
+<header class="page-header">
   <nav class="main-nav main-nav--no-js">
     <div class="main-nav__logo-wrapper">
       <a class="main-nav__logo header-logo" href="index.html" aria-label="Мишка">
@@ -67,13 +67,10 @@
     <ul class="catalog__list">
       <li class="catalog__item">
         <picture>
-          <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-1-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/triple-set-mobile.webp 1x, img/triple-set-mobile@2x.webp 2x">
-
-          <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.png 2x">
-          <img img class="catalog__item__picture" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-ha" alt="Зайчик-попрыгайчик">
+          <source media="(min-width: 1150px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+          <img class="catalog__item__picture" src="img/photo-1-mobile@1x.jpg"
+               srcset="img/photo-1-mobile@1x.jpg 1x, img/photo-1-mobile@2x.jpg 2x" alt="Зайчик попрыгайчик">
         </picture>
         <h2 class="catalog__item__title">Зайчик-попрыгайчик</h2>
         <p class="catalog__item__properties">Рост 30 см, вес 200 г</p>
@@ -93,9 +90,10 @@
       </li>
       <li class="catalog__item">
         <picture>
-          <source srcset="img/photo-bowl-desktop@1x.jpg" media="(min-width: 1150px)">
-          <source srcset="img/photo-bowl-tablet@1x.jpg" media="(min-width: 768px)">
-          <img class="catalog__item__picture" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья">
+          <source media="(min-width: 1150px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+          <img class="catalog__item__picture" src="img/photo-2-mobile@1x.jpg"
+               srcset="img/photo-2-mobile@1x.jpg 1x, img/photo-2-mobile@2x.jpg 2x" alt="Корзинка для белья">
         </picture>
         <h2 class="catalog__item__title">Корзинка для белья</h2>
         <p class="catalog__item__properties">Диаметр 15 см, высота 10 см</p>
@@ -115,9 +113,10 @@
       </li>
       <li class="catalog__item">
         <picture>
-          <source srcset="img/photo-toys-desktop@1x.jpg" media="(min-width: 1150px)">
-          <source srcset="img/photo-toys-tablet@1x.jpg" media="(min-width: 768px)">
-          <img class="catalog__item__picture" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзина для игрушек">
+          <source media="(min-width: 1150px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+          <img class="catalog__item__picture" src="img/photo-3-mobile@1x.jpg"
+               srcset="img/photo-3-mobile@1x.jpg 1x, img/photo-3-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
         </picture>
         <h2 class="catalog__item__title">Большая корзина для игрушек</h2>
         <p class="catalog__item__properties">Диаметр 30 см, высота 30 см</p>
@@ -142,9 +141,10 @@
       <li class="process__item--video item-video">
         <h2 class="item-video__title">Процесс производства</h2>
         <picture>
-          <source srcset="img/video-desktop@1x.jpg" media="(min-width: 1150px)">
-          <source srcset="img/video-tablet@1x.jpg" media="(min-width: 768px)">
-          <img class="item-video__picture" src="img/video-mobile@1x.jpg">
+          <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+          <img class="item-video__picture" src="img/video-mobile@1x.jpg"
+               srcset="img/video-mobile@1x.jpg 1x, img/video-mobile@2x.jpg 2x" alt="Процесс производства">
         </picture>
         <button class="item-video__play" type="button"></button>
         <p class="item-video__description">
@@ -187,5 +187,21 @@
     </a>
   </div>
 </footer>
+<section class="modal">
+  <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+    <h3 class="modal__title">Добавить в корзину</h3>
+    <p class="modal__description">Выберите размер:</p>
+    <div class="modal__list">
+      <input class="visually-hidden" type="radio" name="size" value="S" id="S" checked>
+      <label class="modal__label" for="S">S</label>
+      <input class="visually-hidden" type="radio" name="size" value="M" id="M">
+      <label class="modal__label" for="M">M</label>
+      <input class="visually-hidden" type="radio" name="size" value="L" id="L">
+      <label class="modal__label" for="L">L</label>
+    </div>
+    <button class="modal__button" type="submit">Добавить</button>
+  </form>
+</section>
 </body>
+<script src="js/main.js"></script>
 </html>
