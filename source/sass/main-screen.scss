@@ -202,11 +202,11 @@
     grid-template-columns: repeat(2, 1fr);
     max-width: 1150px;
     margin: 0 auto;
-    background: url("../img/hero-tablet@1x.jpg") top center;
+    background: url("../img/hero-tablet@1x.jpg") center -60px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../img/hero-tablet@2x.jpg") no-repeat top center;
-      background-size: contain;
+      background: url("../img/hero-tablet@2x.jpg") no-repeat center -60px;
+      background-size: auto 750px;
     }
 
     &-wrapper {

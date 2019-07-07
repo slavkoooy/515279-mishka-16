@@ -221,9 +221,11 @@
   text-decoration: none;
 
   &[href]:hover {
+    opacity: 0.6;
   }
 
   &[href]:active {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {
@@ -302,9 +304,11 @@
   }
 
   &[href]:hover {
+
   }
 
   &[href]:active {
+
   }
 
   &--search {
@@ -331,7 +335,7 @@
   left: 30px;
   top: 50%;
   transform: translateY(-50%);
-  fill: #000000;
+  fill: #cecece;
 
   @media (min-width: $tablet-width) {
     left: 32px;
@@ -339,7 +343,7 @@
 
   .user-list__link:hover &,
   .user-list__link:active & {
-    fill: #000000;
+    fill: #63d1bb;
   }
 
   .user-list__link:active & {
@@ -400,9 +404,11 @@
   text-decoration: none;
 
   &[href]:hover {
+    opacity: 0.6;
   }
 
   &[href]:active {
+    opacity: 0.3;
   }
 }
 
