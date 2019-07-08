@@ -116,7 +116,7 @@
 @media (min-width: $desktop-width) {
   .about {
     max-width: 1150px;
-    margin: 60px auto 0 auto;
+    margin: 50px auto 0 auto;
 
     &__title {
       font-size: 53px;
@@ -124,7 +124,16 @@
       margin: 0 220px 0 220px;
     }
 
+    &__item {
+      &::before {
+        margin-bottom: 15px;
+      }
+    }
+
     &__list {
+      grid-template-columns: repeat(2, 295px);
+      grid-column-gap: 60px;
+      grid-row-gap: 55px;
       margin: 0 220px 0 220px;
     }
   }

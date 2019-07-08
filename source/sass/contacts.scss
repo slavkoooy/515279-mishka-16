@@ -131,7 +131,7 @@
 
     &__button {
       padding: 12px 39px;
-      margin: auto auto auto 174px;
+      margin: auto auto 0 174px;
       font-size: 17px;
       font-weight: bold;
       color: $grey;
@@ -153,7 +153,7 @@
       grid-column: 1/2;
       position: relative;
       padding: 0 0 0 111px;
-      margin: 75px 0 0 60px;
+      margin: 60px 0 0 60px;
       font-size: 53px;
       font-weight: bold;
 
